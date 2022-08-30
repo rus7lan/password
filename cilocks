@@ -132,7 +132,7 @@ elif [[ $select == 2 ]]; then
       if ! (( `expr $i + 1` % 5 )); then
           adb shell input keyevent 66
           echo "Delay Limit 1s"
-          sleep 1
+          sleep 0.5
           adb shell input keyevent 82
           adb shell input swipe 407 1211 378 85
       fi
@@ -158,11 +158,11 @@ elif [[ $select == 3 ]]; then
           secs=$((1 * 1))
           while [ $secs -gt 0 ]; do
              echo -ne "$secs\033[0K\r"
-             sleep 1
+             sleep 0.5
              : $((secs--))
           done
 
-          sleep 30
+          sleep 0.5
           adb shell input keyevent 82
           adb shell input swipe 407 1211 378 85
       fi
@@ -188,11 +188,11 @@ elif [[ $select == 4 ]]; then
           secs=$((1 * 1))
           while [ $secs -gt 0 ]; do
              echo -ne "$secs\033[0K\r"
-             sleep 1
+             sleep 0.5
              : $((secs--))
           done
 
-          sleep 30
+          sleep 0.5
           adb shell input keyevent 82
           adb shell input swipe 407 1211 378 85
       fi
